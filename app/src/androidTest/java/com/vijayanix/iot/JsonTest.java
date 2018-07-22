@@ -51,6 +51,7 @@ public class JsonTest {
 		System.out.println(bssid);
 
 		/*"{\"response\":{\"bssid\":\"5c:cf:7f:f2:27:94\",\"deviceType\":23703,\"clientId\":\"35838489\",\"lightA\":0,\"lightB\":0}}"*/
+	
 	}
 
 
