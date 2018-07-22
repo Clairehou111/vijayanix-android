@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/img_bg_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/device_img"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/fourth"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/device_state_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/device_name"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/device_state_desc"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <!-- <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:gravity="center_vertical"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/tvDeviceSubs"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="TextView"
+                 android:textColor="@color/black"
+                 android:textSize="10sp" />
+             <TextView
+                 android:id="@+id/tvDeviceBind"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="TextView"
+                 android:textColor="@color/black"
+                 android:textSize="10sp" />
+             <TextView
+                 android:id="@+id/tvDeviceStatus"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="TextView"
+                 android:textColor="@color/black"
+                 android:textSize="10sp" />
+         </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:showText="true"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:checked="false"
+                android:visibility="gone"/>
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_circle_black_18dp"
+                android:textOn="@string/off"
+                android:textOff="@string/on"
+                android:showText="true"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:checked="false"
+                android:visibility="gone"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

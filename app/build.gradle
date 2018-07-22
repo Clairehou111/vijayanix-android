@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.jakewharton.butterknife'
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 21
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    productFlavors {
+        pro {
+            applicationId = "com.vijayanix.iotpro"
+        }
+        basic {
+            applicationId = "com.vijayanix.iot"
+        }
+    }
+
+    buildTypes {
+        release {
+            /*  minifyEnabled true
+            shrinkResources true*/
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            versionNameSuffix '-debug'
+        }
+    }
+
+/*    lintOptions {
+        disable 'MissingTranslation'
+    }*/
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    /*针对greenDao的一些配置*/
+    greendao {
+        schemaVersion 1 //指定数据库schema版本号，迁移等操作会用到
+        daoPackage 'com.vijayanix.iot.db.greendao.gen' //自动生成的工具类的包名,dao的包名，包名默认是entity所在的包
+        targetGenDir 'src/main/java' //生成数据库文件的目录
+    }
+    dexOptions {
+        preDexLibraries = false
+        //incremental true
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'http://guardian.github.com/maven/repo-releases' }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.3@aar') { transitive = true; }
+    compile('com.github.afollestad.material-dialogs:commons:0.8.5.3@aar') { transitive = true; }
+    compile('com.mikepenz:materialdrawer:4.6.1@aar') { transitive = true; }
+    compile('com.mikepenz:aboutlibraries:5.2.1@aar') { transitive = true; }
+    compile files('src/libs/libEsptouch_v0.3.4.5.jar')
+    compile files('src/libs/jmdns-3.4.1.jar')
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.github.yukuku:ambilwarna:2.0.1'
+    compile 'com.mikepenz:google-material-typeface:1.2.0.1@aar'
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
+
+

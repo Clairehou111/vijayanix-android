@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+  
+    <declare-styleable name="GifView">  
+        <attr name="gif" format="reference" />  
+        <attr name="paused" format="boolean" />  
+    </declare-styleable>  
+    <declare-styleable name="CustomTheme">  
+        <attr name="gifViewStyle" format="reference" />  
+    </declare-styleable>  
+  
+    <declare-styleable name="RoundProgressBar">  
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"/>
+        <attr name="textColor" format="color" />  
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"/>
+        <attr name="textIsDisplayable" format="boolean"/>
+        <attr name="style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- DiffuseView starts -->
+    <!--扩散圆颜色-->
+    <attr name="diffuse_color" format="color"/>
+    <!--中心圆颜色-->
+    <attr name="diffuse_coreColor" format="color"/>
+    <!--中心圆图片-->
+    <attr name="diffuse_coreImage" format="reference"/>
+    <!--中心圆半径-->
+    <attr name="diffuse_coreRadius" format="float"/>
+    <!--扩散圆宽度,值越小越宽-->
+    <attr name="diffuse_width" format="integer"/>
+    <!--最大扩散宽度-->
+    <attr name="diffuse_maxWidth" format="integer"/>
+    <!--扩散速度，值越大越快-->
+    <attr name="diffuse_speed" format="integer"/>
+
+    <declare-styleable name="DiffuseView">
+        <attr name="diffuse_color"/>
+        <attr name="diffuse_coreColor"/>
+        <attr name="diffuse_coreImage"/>
+        <attr name="diffuse_coreRadius"/>
+        <attr name="diffuse_width"/>
+        <attr name="diffuse_maxWidth"/>
+        <attr name="diffuse_speed"/>
+    </declare-styleable>
+
+    <!-- DiffuseView ends -->
+
+
+</resources>  

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+
+    <com.vijayanix.iot.widget.VerticalSwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/device_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarSize="3dp"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            />
+</com.vijayanix.iot.widget.VerticalSwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/no_results"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_results"
+            android:lines="2"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
