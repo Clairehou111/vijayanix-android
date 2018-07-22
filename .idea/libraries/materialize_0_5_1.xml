@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="materialize-0.5.1">
+    <CLASSES>
+      <root url="file://D:/Android/.android/build-cache/0a39c1087d8d65b7a2bb030a0c874ada13d53f62/output/res" />
+      <root url="jar://D:/Android/.android/build-cache/0a39c1087d8d65b7a2bb030a0c874ada13d53f62/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/Android/.gradle/caches/modules-2/files-2.1/com.mikepenz/materialize/0.5.1/8ac90ff435097035103c7f8e4d52be47a4053380/materialize-0.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

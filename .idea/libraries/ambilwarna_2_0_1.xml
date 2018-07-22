@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ambilwarna-2.0.1">
+    <CLASSES>
+      <root url="jar://D:/Android/.android/build-cache/c4b7f1b3baf29aeee9afabbc7362c85e7ed90f48/output/jars/classes.jar!/" />
+      <root url="file://D:/Android/.android/build-cache/c4b7f1b3baf29aeee9afabbc7362c85e7ed90f48/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/Android/.gradle/caches/modules-2/files-2.1/com.github.yukuku/ambilwarna/2.0.1/83d7f0b798f6cdf00c65e408a097dbd3c22bdd8e/ambilwarna-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
